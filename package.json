@@ -1,0 +1,19 @@
+{
+  "name": "tracemate",
+  "version": "1.1.0",
+  "private": true,
+  "description": "TraceMate — MIT-WPU campus lost & found (MERN proof of concept)",
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n api,web -c blue,magenta \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "start": "npm --prefix server run start",
+    "build": "npm --prefix client run build",
+    "seed": "npm --prefix server run seed",
+    "test": "npm --prefix server run test",
+    "test:smoke": "npm --prefix server run test:smoke"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

@@ -1,0 +1,37 @@
+/* Styles for claims, photos, tabs and My activity (extends index.css). */
+.item-photo{width:100%;height:150px;object-fit:cover;border-radius:12px;margin-bottom:12px;background:#f1f0fb}
+.badge-row{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 10px}
+.status-badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11.5px;font-weight:700;background:#efeefb;color:#4d44c4}
+.status-badge.claim-pending,.status-badge.claim-pending{background:#fff4dc;color:#9a6200}
+.status-badge.claimed,.status-badge.claim-approved{background:#e1f6ea;color:#17744a}
+.status-badge.returned,.status-badge.claim-completed{background:#dff3ff;color:#145f8f}
+.status-badge.claim-rejected{background:#fde7e7;color:#a12a2a}
+.status-badge.mine{background:#efeefb;color:#4d44c4}
+.inline-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.ai-note{display:block;margin-top:6px}
+.field-label{display:block;font-weight:600;margin-bottom:8px}
+.photo-field small{display:block;margin-top:6px;color:#7b7a96}
+.photo-grid{display:flex;gap:10px;flex-wrap:wrap}
+.photo-thumb{position:relative;width:96px;height:96px;border-radius:12px;overflow:hidden;border:1px solid #e3e1f5}
+.photo-thumb img{width:100%;height:100%;object-fit:cover}
+.photo-remove{position:absolute;top:4px;right:4px;border:0;border-radius:8px;background:#fffffff0;padding:4px;display:flex;color:#a12a2a}
+.photo-add{width:96px;height:96px;border:1.5px dashed #b9b4ee;border-radius:12px;background:#faf9ff;color:#4d44c4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:12px;font-weight:600}
+.photo-add:disabled{opacity:.6;cursor:wait}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 20px}
+.tab{border:1px solid #e3e1f5;background:#fff;border-radius:999px;padding:9px 16px;font-weight:600;color:#55537a}
+.tab.active{background:#635bdb;border-color:#635bdb;color:#fff}
+.claim-list{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+.claim-card{background:#fff;border:1px solid #ebeaf4;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.claim-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.claim-head h3{margin:0;font-size:16px}
+.claim-meta{display:flex;align-items:center;gap:6px;margin:0;color:#6b6a8a;font-size:13px;flex-wrap:wrap}
+.claim-text{margin:0;color:#34325a}
+.claim-note{margin:0;color:#7b3b3b;font-size:13px}
+.proof-box,.handover-box{background:#f6f5ff;border:1px solid #e3e1f5;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;font-size:13px}
+.handover-box{background:#eefaf3;border-color:#cdeedb}
+.handover-box span{display:flex;align-items:center;gap:6px}
+.claim-actions{display:flex;gap:8px;flex-wrap:wrap}
+.claim-note-input{border:1px solid #e3e1f5;border-radius:10px;padding:9px 12px}
+.match-reasons{color:#6b6a8a;font-size:12px;margin:4px 0 0}
+.agent-summary-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:900px){.agent-summary-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}}

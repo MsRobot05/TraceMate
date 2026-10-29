@@ -1,0 +1,12 @@
+# Optional: a local MongoDB without installing it.   docker compose up -d
+# Then keep MONGODB_URI=mongodb://127.0.0.1:27017/tracemate in server/.env
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - tracemate-data:/data/db
+volumes:
+  tracemate-data:
