@@ -152,18 +152,6 @@ Build check: `npm run build`.
 5. Approve a claim and show contact details unlocking only after approval (60 s).
 6. Flag → auto-hide → admin restore, then show `/api/health` and the passing tests (45 s).
 
-## Viva preparation
-
-- **Why MERN?** One language end to end; MongoDB documents map naturally to reports with varying fields.
-- **What does Express do?** Defines REST endpoints and middleware (auth, rate limiting, validation, errors) between UI and database.
-- **Why Mongoose?** Schemas, validation, enums, indexes and a clean query API.
-- **How is authentication handled?** bcrypt-hashed passwords; login returns a 7-day JWT sent as `Authorization: Bearer`; admin routes re-check the role in MongoDB so a demotion applies immediately.
-- **How are privacy and authorization handled?** Owner checks on edit/delete/review; `safeItem()` strips contact fields, owner id and flag details from public responses; contact details unlock only after claim approval.
-- **How does a claim work?** Claim with private proof → owner approves/rejects → completed; the item status follows the claims (open → claim-pending → claimed → returned).
-- **How does moderation work?** Any member can flag; three distinct flags auto-hide a report; admins review the queue and can restore, hide, dismiss flags or remove.
-- **Is the AI a trained model?** No. Matching is deterministic text/category/location overlap with visible reasons. Optional Gemini only rewrites descriptions or summarizes public results, server-side.
-- **How is the upload safe?** Type allow-list, 5 MB limit, random server-side filenames, and a magic-byte check so a renamed text file is rejected.
-- **Limitations:** no verified student identity or OTP, notifications are polled every 30 s (no websockets/email), moderation is basic, matching is not proof of ownership, search is regex based (no text index).
 
 ## Agentic AI workspace
 
